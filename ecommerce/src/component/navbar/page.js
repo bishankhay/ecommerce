@@ -1,9 +1,12 @@
+'use client'
 import React from 'react'
 
-const git = () => {
+const git
+ = () => {
   return (
     <div>git</div>
-  )
+ 
+)
 }
 
 export default git
