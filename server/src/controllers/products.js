@@ -1,14 +1,18 @@
-const getListOfProducts= function (req, res) {
-    res.send(['bikram','ram', 'hari', 'gopal']);
-  };
-  const postProduct = function (req, res) {
-    res.send("About this wiki");
-  };
-  const deleteProduct = function (req, res) {
-    res.send("About this wiki");
-  };
-  const putProduct = function (req, res) {
-    res.send("About this wiki");
-  };
+const Product = require('../models/Products')
+const getListOfProducts = function (req, res) {
+    res.send(['hawkins','baltra','cg']);
+  }
 
-  module.exports= {getListOfProducts, postProduct, deleteProduct, putProduct}
+const postProducts = function (req, res) {
+  Product.create(req.body)
+  res.send("Ok")
+  }
+
+const deleteProduct = function (req, res) {
+    res.send("Wiki home page");
+  }    
+const putProducts = function (req, res) {
+    res.send("Wiki home page");
+  }  
+
+ module.exports= {getListOfProducts, postProducts, deleteProduct, putProducts} 

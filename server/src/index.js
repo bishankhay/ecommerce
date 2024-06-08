@@ -1,12 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
-const productsRoute = require('./routes/products')
-const dbconnect = require('./db/connection')
+const port = 4000
+const productRoute = require ('./routes/products')
+const dbConnect = require('./db/connection')
 
-
-app.use(productsRoute)
+app.use(productRoute)
 
 app.listen(port, () => {
-  console.log('Example app listening on port ${port}')
+  console.log(`Example app listening on port ${port}`)
 })
