@@ -1,6 +1,7 @@
 const Product = require('../models/Products')
-const getListOfProducts = function (req, res) {
-    res.send(['hawkins','baltra','cg']);
+const getListOfProducts = async (req, res) => {
+   const data = await Product.find()
+   res.send(data)
   }
 
 const postProducts = function (req, res) {
